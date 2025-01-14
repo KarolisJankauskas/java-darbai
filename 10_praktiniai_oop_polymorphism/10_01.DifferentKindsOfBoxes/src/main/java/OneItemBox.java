@@ -1,17 +1,17 @@
-public class OneItemBox extends Box{
+import java.util.ArrayList;
 
-
+public class OneItemBox extends Box {
     private Item item;
+
+    public OneItemBox() {
+        this.item = null;
+    }
 
     @Override
     public void add(Item item) {
         if (this.item == null) {
             this.item = item;
         }
-
-    }
-
-    public OneItemBox() {
     }
 
     @Override

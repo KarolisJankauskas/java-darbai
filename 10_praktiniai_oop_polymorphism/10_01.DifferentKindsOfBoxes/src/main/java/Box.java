@@ -1,11 +1,8 @@
-
 import java.util.ArrayList;
 
 public abstract class Box {
-
-    protected Item item;
-
     public abstract void add(Item item);
+
 
     public void add(ArrayList<Item> items) {
         for (Item item : items) {
