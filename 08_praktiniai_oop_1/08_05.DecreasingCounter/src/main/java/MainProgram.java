@@ -6,6 +6,11 @@ public class MainProgram {
 
         counter.printValue();
         counter.decrement();
+        counter.printValue();
         counter.decrement();
+        counter.printValue();
+        counter.reset();
+        counter.printValue();
+
     }
 }

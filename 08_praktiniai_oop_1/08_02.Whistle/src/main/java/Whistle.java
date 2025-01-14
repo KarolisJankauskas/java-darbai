@@ -1,15 +1,16 @@
 public class Whistle {
 
-    // Private variable to store the sound of the whistle
-    private String sound;
+    private String whistlesound;
 
-    // Constructor to initialize the sound of the whistle
-    public Whistle(String whistleSound) {
-        this.sound = whistleSound;
+    public Whistle(String whistlesound) {
+
+        this.whistlesound = whistlesound;
     }
 
-    // Method to print the sound of the whistle
     public void sound() {
-        System.out.println(this.sound);
+        System.out.println(whistlesound);
     }
+
+
 }
+

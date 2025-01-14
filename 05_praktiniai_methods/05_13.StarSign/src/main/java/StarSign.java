@@ -30,21 +30,21 @@ public class StarSign {
 
     public static void printSquare(int size) {
         for (int i = 0; i < size; i++) {
-            // Call printStars to print each row of the square
+
             printStars(size);
         }
     }
 
     public static void printRectangle(int width, int height) {
         for (int i = 0; i < height; i++) {
-            // Call printStars to print each row of the rectangle
+
             printStars(width);
         }
     }
 
     public static void printTriangle(int size) {
         for (int i = 1; i <= size; i++) {
-            // Call printStars to print each row of the triangle
+
             printStars(i);
         }
     }
