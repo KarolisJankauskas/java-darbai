@@ -9,5 +9,17 @@ public class ArrayPrinter {
 
     public static void printNeatly(int[] array) {
         // Write some code in here
+        boolean first = true;
+
+        for (int number : array) {
+            if (!first) {
+                System.out.print(", ");
+            }
+            System.out.print(number);
+            first = false;
+        }
+
+        System.out.println();
     }
+
 }
