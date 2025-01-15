@@ -1,0 +1,39 @@
+git init
+git add .(index.html)
+git commit -m "ka nors parasai"
+
+git config --global --list
+git config --global user.name "your name"
+git config --global user.email "your_email@example.com"
+$ git config --global core.editor "code --wait"-set visual studio code as the default editor for Git.
+Forking
+Gitflow Workflow
+Feture Branching
+git - sukurti ssh rakta - ssh-keygen -t ed25519 -C "your_email@example.com"
+git log --oneline --all --graph
+git branch feature (sukuria nauja saka)
+git branch  -d feature(sakos pavadinimas)(su didziaja D istrina)
+git merge arba rebase (feature-sakos pavadinimas)(sujungia sakas)(fastforward-sujunge masteryje nieko neivyko)
+git switch -c bugfix (sukuria nauja saka ir iskarto persijungia)
+git commit -am "bugfix"-nerekomenduoja naudoti
+git switch master (pakeisti saka)
+git remote -v
+git push origin master(arba main)
+git pull(atnaujinti repositorija)
+git add .
+git commit (sujungimui)
+git push origin main (sujungimui po konfliktu)
+
+git swtich -c body
+git add .
+git commit -m "kanors"
+git merge (tik is savo sakos i master)
+git push origin body
+git stash(laikinai padeti)
+git pop(issitraukti su po)
+npm run dev
+npx json-server data/posts.json --port 5000
+
+		
+
+
