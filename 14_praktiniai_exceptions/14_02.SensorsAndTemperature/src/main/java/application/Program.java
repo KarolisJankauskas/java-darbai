@@ -28,10 +28,17 @@ public class Program {
 
 
         helsinkiRegion.setOn();
-        System.out.println("temperature in Helsinki region " + helsinkiRegion.read() +"degrees Celsius");
+        helsinkiRegion.setOn();
+
+        System.out.println("Temperature in Helsinki region: " + helsinkiRegion.read() + " degrees Celsius");
+        System.out.println("Temperature in Helsinki region: " + helsinkiRegion.read() + " degrees Celsius");
+        System.out.println("Temperature in Helsinki region: " + helsinkiRegion.read() + " degrees Celsius");
+
+        System.out.println("Readings: " + helsinkiRegion.readings());
 
 
-        
+
+
     }
 
 }

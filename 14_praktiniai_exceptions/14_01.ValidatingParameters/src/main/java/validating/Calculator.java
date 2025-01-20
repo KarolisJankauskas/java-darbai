@@ -9,7 +9,7 @@ public class Calculator {
             answer *= i;
         }
 
-        if (num<=0){
+        if (num < 0){
             throw new IllegalArgumentException("num cant be negative");
         };
 
@@ -17,6 +17,13 @@ public class Calculator {
     }
 
     public int binomialCoefficent(int setSize, int subsetSize) {
+
+        if (setSize <0 || subsetSize<0){
+            throw new IllegalArgumentException("Parameters can't be positive ");
+        }
+        if (subsetSize > setSize){
+          throw new IllegalArgumentException("Subset size can't exceed Size ");
+        };
 
         int numerator = factorial(setSize);
         int denominator = factorial(subsetSize) * factorial(setSize - subsetSize);

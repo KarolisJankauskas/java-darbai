@@ -10,11 +10,11 @@ public class Person {
         this.name = name;
         this.age = age;
 
-        if (age >= 120 || age<0) {
-            throw new IllegalArgumentException("age incorect");
+        if (age > 120 || age<0) {
+            throw new IllegalArgumentException("Age must be between 0 and 120.");
         }
-        if(name == null || name.isEmpty()){
-            throw new IllegalArgumentException("wrong name");
+        if(name == null || name.isEmpty() || name.length() > 40){
+            throw new IllegalArgumentException("Name can't be null,empty or longer then 40 symbols");
         };
 
 

@@ -2,9 +2,9 @@ package application;
 
 public class StandardSensor implements Sensor {
 
-
-    public StandardSensor(int i) {
-
+private int value;
+    public StandardSensor(int value) {
+this.value = value;
     }
 
     @Override
@@ -24,6 +24,6 @@ public class StandardSensor implements Sensor {
 
     @Override
     public int read() {
-        return 0;
+        return value;
     }
 }

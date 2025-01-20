@@ -1,31 +1,65 @@
 package application;
 
-public class AverageSensor implements Sensor{
+import java.util.ArrayList;
+import java.util.List;
 
-    private Sensor toAdd;
+public class AverageSensor implements Sensor{
+    private List<Sensor> sensors;
+    private List<Integer> readings;
+public AverageSensor(){
+    this.sensors = new ArrayList<>();
+    this.readings = new ArrayList<>();
+}
+   public void addSensor(Sensor toAdd){
+    sensors.add(toAdd);
+   }
 
     @Override
     public boolean isOn() {
-        return false;
+        for (Sensor sensor : sensors) {
+
+            if (!sensor.isOn()) {
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
     public void setOn() {
+        for (Sensor sensor : sensors) {
+            sensor.setOn();
+        }
 
     }
 
     @Override
     public void setOff() {
+        for (Sensor sensor : sensors) {
+            sensor.setOff();
+        }
 
     }
 
-    public void addSensor(Sensor toAdd){
-        this.toAdd = toAdd;
-    }
 
 
     @Override
     public int read() {
-        return 0;
+        if (sensors.isEmpty() || !isOn()) {
+            throw new IllegalStateException("Average sensor is off or has no sensors.");
+        }
+
+        int sum = 0;
+        for (Sensor sensor : sensors) {
+            sum += sensor.read();
+        }
+        int average = sum / sensors.size();
+        readings.add(average);
+        return average;
+    }
+    public List<Integer> readings() {
+        return new ArrayList<>(readings);
     }
 }
+
+
