@@ -23,3 +23,5 @@ public class Main {
         System.out.println();
     }
 }
+//        Create a class Abbreviations for managing common abbreviations.
+//        The class must have a constructor, which does not take any parameters.

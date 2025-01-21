@@ -1,21 +1,45 @@
-
 import java.util.HashMap;
-
-
 
 public class Program {
 
-    public static void main(String[] args) {
-        // Test your program here!
+    public static void printKeys(HashMap<String, String> hashmap) {
+        for (String key : hashmap.keySet()) {
+            System.out.println(key);
+        }
     }
 
-HashMap<String,String> hashmap = new HashMap<>();
+    public static void printKeysWhere(HashMap<String, String> hashmap, String text) {
+        for (String key : hashmap.keySet()) {
+            if (key.contains(text)) {
+                System.out.println(key);
+            }
+        }
+    }
 
-    hashmap.put("f.e", "for example");
-    hashmap.put("f.e", "for example");
-    hashmap.put("f.e", "for example");
+    public static void printValuesOfKeysWhere(HashMap<String, String> hashmap, String text) {
+        for (String key : hashmap.keySet()) {
+            if (key.contains(text)) {
+                System.out.println(hashmap.get(key));
+            }
+        }
+    }
 
 
-    pribtKeys(hashmap);
+    public static void main(String[] args) {
+        HashMap<String, String> hashmap = new HashMap<>();
+        hashmap.put("f.e", "for example");
+        hashmap.put("etc.", "and so on");
+        hashmap.put("i.e", "more precisely");
 
+        printKeys(hashmap);
+        System.out.println("---");
+        printKeysWhere(hashmap, "i");
+        System.out.println("---");
+        printValuesOfKeysWhere(hashmap, ".e");
+    }
 }
+
+//Exercise template contains a class Program. Implement the following class methods in the class:
+//public static void printKeys(HashMap<String,String> hashmap), prints all the keys in the hashmap given as a parameter.
+//public static void printKeysWhere(HashMap<String,String> hashmap, String text) prints the keys in the hashmap given as a parameter, which contain the string given as a parameter.
+//public static void printValuesOfKeysWhere(HashMap<String,String> hashmap, String text), prints the values in the given hashmap whichs keys contain the given string
