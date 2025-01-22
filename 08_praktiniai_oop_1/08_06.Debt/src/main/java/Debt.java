@@ -1,6 +1,6 @@
 public class Debt {
     private double balance;
-    private double interestRate;
+    private final double interestRate;
 
     public Debt(double initialBalance, double initialInterest) {
         this.balance = initialBalance;

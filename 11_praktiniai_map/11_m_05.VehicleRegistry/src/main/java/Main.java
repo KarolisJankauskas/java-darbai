@@ -3,7 +3,6 @@ import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
-        // Part 1: Test LicensePlate
         LicensePlate li1 = new LicensePlate("FI", "ABC-123");
         LicensePlate li2 = new LicensePlate("FI", "UXE-465");
         LicensePlate li3 = new LicensePlate("D", "B WQ-431");
@@ -26,7 +25,6 @@ public class Main {
         System.out.println(owners.get(new LicensePlate("FI", "ABC-123")));
         System.out.println(owners.get(new LicensePlate("D", "B WQ-431")));
 
-        // Part 2 and 3: Test VehicleRegistry
         VehicleRegistry registry = new VehicleRegistry();
         registry.add(li1, "Arto");
         registry.add(li2, "Pekka");
@@ -38,7 +36,6 @@ public class Main {
         System.out.println("--- Owners ---");
         registry.printOwners();
 
-        // Test getting and removing
         System.out.println("Owner of " + li1 + ": " + registry.get(li1));
         registry.remove(li2);
         System.out.println("--- After removing FI UXE-465 ---");

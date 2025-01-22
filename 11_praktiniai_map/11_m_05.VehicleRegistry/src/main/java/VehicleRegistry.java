@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 public class VehicleRegistry {
-    private HashMap<LicensePlate, String> registry;
+    private final HashMap<LicensePlate, String> registry;
 
     public VehicleRegistry() {
         this.registry = new HashMap<>();
@@ -20,12 +20,11 @@ public class VehicleRegistry {
         return registry.get(licensePlate);
     }
 
-    public boolean remove(LicensePlate licensePlate) {
+    public void remove(LicensePlate licensePlate) {
         if (!registry.containsKey(licensePlate)) {
-            return false;
+            return;
         }
         registry.remove(licensePlate);
-        return true;
     }
 
     public void printLicensePlates() {

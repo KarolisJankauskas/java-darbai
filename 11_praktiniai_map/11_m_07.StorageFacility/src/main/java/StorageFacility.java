@@ -21,9 +21,9 @@ public class StorageFacility {
     public void remove(String storageUnit, String item) {
         ArrayList<String> items = this.storageUnits.get(storageUnit);
         if (items != null) {
-            items.remove(item); // Removes one instance of the item
+            items.remove(item);
             if (items.isEmpty()) {
-                this.storageUnits.remove(storageUnit); // Remove unit if empty
+                this.storageUnits.remove(storageUnit);
             }
         }
     }
