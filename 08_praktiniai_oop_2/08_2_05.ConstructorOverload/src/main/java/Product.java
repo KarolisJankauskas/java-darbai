@@ -1,8 +1,8 @@
 public class Product {
 
-    private String name;
-    private String location;
-    private int weight;
+    private final String name;
+    private final String location;
+    private final int weight;
 
     public Product(String name, String location, int weight) {
         this.name = name;

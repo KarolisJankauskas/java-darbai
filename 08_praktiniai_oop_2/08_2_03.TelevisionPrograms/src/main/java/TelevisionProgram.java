@@ -1,8 +1,8 @@
 
 public class TelevisionProgram {
 
-    private String name;
-    private int duration;
+    private final String name;
+    private final int duration;
 
     public TelevisionProgram(String name, int duration) {
         this.name = name;
